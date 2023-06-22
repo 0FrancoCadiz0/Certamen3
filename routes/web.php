@@ -9,3 +9,6 @@ Route::get('/login',[HomeController::class,'login'])->name('home.login');
 Route::get('/artista',[ArtistaController::class,'artista'])->name('artista.index');
 Route::post('/artista',[ArtistaController::class,'store'])->name('artista.store');
 Route::delete('/artista/{id}', [ArtistaController::class, 'destroy'])->name('artista.destroy');
+
+Route::get('/register',[HomeController::class,'register'])->name('home.register'); 
+Route::post('/register',[HomeController::class,'store'])->name('newArtista.store');
