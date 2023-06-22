@@ -26,4 +26,12 @@ class ArtistaController extends Controller
         $img->save();
         return redirect()->route('artista.index');
         }
+
+        public function destroy($id)
+        {
+            $img = Artista::findOrFail($id);
+            $img->delete();
+            return redirect()->route('artista.index');
+        }
+        
 }

@@ -25,6 +25,7 @@
                                     <th scope="col">Archivo</th>
                                     <th scope="col">Estado</th>
                                     <th scope="col">Motivo baneo</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -35,6 +36,13 @@
                                             <td class="align-middle">{{$img->archivo}}</td>
                                             <td class="align-middle">{{$img->baneada}}</td>
                                             <td class="align-middle">{{$img->motivo_ban}}</td>
+                                            <td class="align-middle">
+                                                <form method="POST" action="{{ route('artista.destroy', $img->id) }}">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endif
                                 @endforeach
