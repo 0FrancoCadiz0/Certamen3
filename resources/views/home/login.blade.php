@@ -12,17 +12,36 @@
 </head>
 <body style='background-image: url("images/fondo.jpg"); background-repeat:no-repeat; background-size:cover'>
     <div class="bar bg-warning" id="barLogin"></div>
-    
-    <div class="container bg-light" id="ContainerLogin">
-        <h2>Iniciar sesión</h2>
-        <form>
+    <div class="row">
+        <div class="container bg-light" id="ContainerLogin">
+            <h2>Iniciar sesión Artista </h2>
+            <form>
 
-            <input type="text" name="username" placeholder="Nombre de usuario" >
-            <input type="password" name="password" placeholder="Contraseña" >
-            <a href="">
-                <input type="submit" value="Iniciar sesión">
-            </a>
-        </form>
+                <input type="text" name="username" placeholder="Nombre de usuario" >
+                <input type="password" name="password" placeholder="Contraseña" >
+                <a href="">
+                    <input type="submit" value="Iniciar sesión">
+                </a>
+                <br>
+                <br>
+
+                <a href="">
+                    <button type="button"  class="bg-warning btn btn-outline-dark" disabled>Crear una Cuenta</button>
+                </a>
+            </form>
+        </div>
+        <div class="container bg-light" id="ContainerLogin">
+            <h2>Iniciar sesión Administrador </h2>
+            <form>
+
+                <input type="text" name="username" placeholder="Nombre de usuario" >
+                <input type="password" name="password" placeholder="Contraseña" >
+                <a href="">
+                    <input type="submit" value="Iniciar sesión">
+                </a>
+               
+            </form>
+        </div>
     </div>
     <img name="img1"src="images/logo.png" alt="logo" width="26%" height="13%">
 
