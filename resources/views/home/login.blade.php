@@ -42,7 +42,36 @@
             <form>
                 <input type="text" name="user" placeholder="Nombre de usuario" >
                 <input type="password" name="password" placeholder="Contraseña" >
+<<<<<<< HEAD
                     <input type="submit" value="Iniciar sesión">
+=======
+                
+                <a href="{{ route('administrador.admin') }}" class="button-link">
+                    <input type="button" value="Iniciar sesión" class="custom-button">
+                </a>
+
+<style>
+    .button-link {
+        display: inline-block;
+        background-color: #f9ca2d;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .custom-button {
+        border: none;
+        background: none;
+        color: #fff;
+        font-size: inherit;
+        cursor: pointer;
+    }
+</style>
+
+>>>>>>> 396fe5a6aedd3e6a97201a5615f89a22058245ca
             </form>
         </div>
     </div>
