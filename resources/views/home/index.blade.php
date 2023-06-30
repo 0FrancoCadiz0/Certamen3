@@ -17,41 +17,19 @@
         <div class="container">
             <div class="row d-flex">
                 <div class="col-lg-8">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Encabezado 1</th>
-                                    <th scope="col">Encabezado 2</th>
-                                    <th scope="col">Encabezado 3</th>
-                                    <th scope="col">Encabezado 4</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Dato 1</td>
-                                    <td>Dato 2</td>
-                                    <td>Dato 3</td>
-                                    <td>Dato 4</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                </div>
-                <div class="col-lg-4">
-                    <div class="card" style="width: 18rem; margin-left:200px">
-                        <img src="images/fondo.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                            <input type="button" value="Editar" class="btn btn-secondary">
+                    @foreach ($imagenes as $img)
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem; margin-left:200px">
+                            <img src="{{Storage::url($img->archivo)}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Titulo: {{$img->titulo}}</h5>
+                            </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
-            <div class="row">
-                <div class="col"></div>
-            </div>
         </div>
-
     </div>
     
     

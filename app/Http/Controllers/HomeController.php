@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ArtistaRegister;
-
+use App\Models\Artista;
 class HomeController extends Controller
 {
     public function login(){
         return view('home.login');
     }
     public function home(){
-        return view('home.index');
+        $imagenes = Artista::all();
+        return view('home.index', compact('imagenes'));
     }
     public function register(){
         return view('home.register');

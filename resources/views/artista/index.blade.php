@@ -47,21 +47,7 @@
                                     @endif
                                 @endforeach
                             </tbody>
-                        </table>
-
-                </div>
-                <div class="col-lg-4">
-                    <div class="card" style="width: 18rem; margin-left:200px">
-                        <img src="images/fondo.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Titulo</h5>
-                            <input type="button" value="Editar" class="btn btn-secondary">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
+                        </table>            
         </div>
         <div class="row d-flex justify-content-end" style="margin-top: 15px">
             <div class="col-lg-3" >

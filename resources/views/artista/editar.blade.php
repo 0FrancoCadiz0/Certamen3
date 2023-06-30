@@ -16,11 +16,14 @@
         @csrf
         @method('put')
         <div class="mb-3">
+            <div>
+                <h1>Titulo: {{$img->titulo}}</h1>
+                <img src="{{Storage::url($img->archivo)}}" alt="{{$img->titulo}}" width="15%" height="15%">
+            </div>
             <div class="form-group">
             <label for="titulo" class="form-label">titulo:</label>
             <input type="text" id="titulo" name="titulo" class="form-control" value="{{$img->titulo}}">
             </div>
-            <img src="{{Storage::url($img->archivo)}}" alt="{{$img->titulo}}">
             <div class="form-group">
                 <label for="archivo">Archivo:</label>
                 <input type="file" name="archivo" class="form-control-file" id="archivo" accept="image/*" value="{{$img->archivo}}">
