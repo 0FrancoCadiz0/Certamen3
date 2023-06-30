@@ -1,3 +1,7 @@
+<?php 
+    $conexion=mysqli_connect('localhost','root','','certamen3');
+
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,20 +43,21 @@
             <table class="table" id="table1">
                 <tr>
                     <th id="th1">Nombre</th>
-                    <th id="th1">Tipo de Cuenta</th>
+                    
                 </tr>
+                
+                <?php
+                $sql="SELECT * from cuentas";
+                $result=mysqli_query($conexion,$sql);
+                while($mostrar=mysqli_fetch_array($result)){
+                ?>
                 <tr>
-                    <td id="td2">Usuario1</td>
-                    <td id="td2">Administrador</td>
+                    <td id="td2"><?php echo $mostrar['user']; ?></td>
+                    
                 </tr>
-                <tr>
-                    <td id="td2">Usuario2</td>
-                    <td id="td2">Artista</td>
-                </tr>
-                <tr>
-                    <td id="td2">Usuario3</td>
-                    <td id="td2">Usuario Básico</td>
-                </tr>
+            <?php
+            }
+            ?>
             </table>
         </div>
     </div>
