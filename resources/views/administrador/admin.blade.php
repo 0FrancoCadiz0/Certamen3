@@ -17,6 +17,9 @@
 <body style='background-image: url("images/fondo.jpg"); background-repeat:no-repeat; background-size:cover'>
     <div class="bar bg-warning">
         <img src="images/logo.png" alt="logo" width="25%" height="100%">
+        <a href="{{ route('home.login') }}" class="button-link">
+            <input type="button" value="Cerrar Sesion" class="custom-button">
+        </a>
     </div>
     <div class="container" id="containeradmin">
         <div class="sidebar" id="sidebar3">
@@ -36,7 +39,7 @@
         </div>
         <div class="content">
             <h2>Listar Perfiles</h2>
-           <table class="table" id="table1">
+        <table class="table" id="table1">
                 <tr>
                     <th id="th1">Nombre</th>
                     <th id="th1">Acciones</th>
