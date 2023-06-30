@@ -20,3 +20,4 @@ Route::get('/artista/{img}/edit',[ArtistaController::class,'edit'])->name('artis
 Route::put('/artista/{img}',[ArtistaController::class,'update'])->name('artista.update');
 
 Route::get('/amd',[AdmiController::class,'admin'])->name('administrador.admin'); 
+Route::delete('/administrador/{user}', [AdmiController::class, 'destroy'])->name('administrador.destroy');

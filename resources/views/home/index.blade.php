@@ -63,7 +63,7 @@
                     @foreach ($imagenes as $img)
                     <div class="col-lg-4">
                         <div class="card" style="width: 18rem; margin-left:500px">
-                            <img src="{{Storage::url($img->archivo)}}" class="card-img-top" alt="...">
+                          
                             <div class="card-body">
                                 <h5 class="card-title">Titulo: {{$img->titulo}}</h5>
                                 <h6>Artista: {{$img->cuenta_user}}</h6>

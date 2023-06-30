@@ -1,7 +1,3 @@
-<?php 
-    $conexion=mysqli_connect('localhost','root','','certamen3');
-
-?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,24 +36,26 @@
         </div>
         <div class="content">
             <h2>Listar Perfiles</h2>
-            <table class="table" id="table1">
+           <table class="table" id="table1">
                 <tr>
                     <th id="th1">Nombre</th>
-                    
+                    <th id="th1">Acciones</th>
                 </tr>
-                
-                <?php
-                $sql="SELECT * from cuentas";
-                $result=mysqli_query($conexion,$sql);
-                while($mostrar=mysqli_fetch_array($result)){
-                ?>
-                <tr>
-                    <td id="td2"><?php echo $mostrar['user']; ?></td>
-                    
-                </tr>
-            <?php
-            }
-            ?>
+                @foreach ($u as $usr)
+                    @if($usr->perfil_id==2)
+                        <tr>
+                            <td id="td2">{{$usr->user}}</td>
+                            <td>
+                                <form method="POST" action="{{ route('administrador.destroy', $usr->user) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+
+                    @endif
+                @endforeach
             </table>
         </div>
     </div>

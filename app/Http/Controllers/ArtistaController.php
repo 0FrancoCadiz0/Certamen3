@@ -33,6 +33,8 @@ class ArtistaController extends Controller
         }
         public function update(Artista $img,Request $request){
             $img->titulo = $request->titulo;
+            $img ->baneada = false;
+
             if ($request->hasFile('archivo')) {
                 $img->archivo = $request->archivo->store('public/imagenes');
             }
