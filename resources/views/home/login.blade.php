@@ -25,7 +25,7 @@
                 <br>
                 <br>
 
-                <a href="">
+                <a href="{{route('home.register')}}">
                     <button type="button"  class="bg-warning btn btn-outline-dark" disabled>Crear una Cuenta</button>
                 </a>
             </form>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArtistaController;
-
+use App\Http\Controllers\AdmiController;
 
 
 Route::get('/',[HomeController::class,'home'])->name('home.index');
@@ -18,3 +18,5 @@ Route::post('/register',[HomeController::class,'store'])->name('newArtista.store
 
 Route::get('/artista/{img}/edit',[ArtistaController::class,'edit'])->name('artista.editar');
 Route::put('/artista/{img}',[ArtistaController::class,'update'])->name('artista.update');
+
+Route::get('/amd',[AdmiController::class,'admin'])->name('administrador.admin'); 

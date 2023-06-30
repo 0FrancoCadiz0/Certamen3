@@ -8,11 +8,41 @@
     <!-- style -->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
     <!-- /style -->
+    <style>
+        .login-link {
+            font-size: 24px;
+            text-decoration: none;
+            color: #000;
+            padding: 10px;
+            background-color: #E1F2FB;
+            border: 1px solid #3498DB;
+            border-radius: 5px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .login-link .arrow-icon {
+            font-size: 30px;
+            margin-left: 10px;
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #E6F0F3;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body style='background-image: url("images/fondo.jpg"); background-repeat:no-repeat; background-size:cover'>
+    
     <div class="bar bg-warning">
         <img src="images/logo.png" alt="logo" width="25%" height="100%">
+        <a href="{{route('home.login')}}" class="login-link">Iniciar sesión <i class="fas fa-arrow-right arrow-icon"></i></a>
     </div>
+
     <div class="container-fluid">
         <div class="container">
             <div class="row d-flex">
@@ -31,12 +61,5 @@
             </div>
         </div>
     </div>
-    
-    
-    
-        
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

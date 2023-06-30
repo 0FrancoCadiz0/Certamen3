@@ -1,0 +1,74 @@
+#containeradmin {
+    --max-width: 1200px;
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bar {
+    --bg-color: #ffcc00;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bg-color);
+}
+
+.bar img {
+    margin-right: 10px;
+}
+
+#sidebar3 {
+    --sidebar-width: 300px;
+    --sidebar-bg-color: #d18b8b;
+    --sidebar-text-color: #fff;
+    --sidebar-padding: 20px;
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-text-color);
+    padding: var(--sidebar-padding);
+}
+
+#h11 {
+    --h1-font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: var(--h1-font-size);
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    --menu-link-color: #fff;
+    --menu-link-font-size: 24px;
+    color: var(--menu-link-color);
+    font-size: var(--menu-link-font-size);
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    --content-bg-color: #fff;
+}
+
+#table1 th,
+#table1 td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 24px;
+}
+
+#table1 th {
+    background-color
