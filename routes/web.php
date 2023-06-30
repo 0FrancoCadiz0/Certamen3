@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArtistaController;
 use App\Http\Controllers\AdmiController;
+use App\Http\Controllers\UsuariosController;
 
 
 Route::get('/',[HomeController::class,'home'])->name('home.index');
@@ -24,3 +25,5 @@ Route::delete('/administrador/{user}', [AdmiController::class, 'destroy'])->name
 
 Route::get('/amd/{img}/info',[AdmiController::class,'info'])->name('administrador.info');
 Route::put('/amd/{img}',[AdmiController::class,'update'])->name('administrador.update');
+
+Route::post('/login',[UsuariosController::class,'login'])->name('usuariosAr.login');

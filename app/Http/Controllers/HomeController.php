@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ArtistaRegister;
 use App\Models\Artista;
+use Illuminate\Support\Facades\Hash;
 class HomeController extends Controller
 {
     public function login(){
@@ -22,7 +23,7 @@ class HomeController extends Controller
     public function registrarArtista(Request $request){
         $newArtista = new ArtistaRegister();
         $newArtista->user = $request->username;
-        $newArtista ->password = $request->password;
+        $newArtista->password = Hash::make($request->password);
         $newArtista ->nombre = $request->nombre;
         $newArtista->apellido = $request->apellido;
         $newArtista->perfil_id = 2;

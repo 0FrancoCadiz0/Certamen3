@@ -29,5 +29,4 @@ class AdmiController extends Controller
         $admi->delete();
         return redirect()->route('administrador.admin');
     }
-   
 }
