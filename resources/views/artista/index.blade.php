@@ -22,10 +22,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Titulo</th>
-                                    <th scope="col">Archivo</th>
                                     <th scope="col">Estado</th>
                                     <th scope="col">Motivo baneo</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,7 +32,6 @@
                                     @if ($img->baneada)
                                         <tr>
                                             <td class="align-middle">{{$img->titulo}}</td>
-                                            <td class="align-middle">{{$img->archivo}}</td>
                                             <td class="align-middle">{{$img->baneada}}</td>
                                             <td class="align-middle">{{$img->motivo_ban}}</td>
                                             <td class="align-middle">
@@ -42,6 +40,8 @@
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger">Eliminar</button>
                                                 </form>
+                                                <a href="{{route('artista.editar',$img->id)}}" class="btn btn-secondary" data-bs-toggle="tooltip"
+                                                        data-bs-title="Editar {{$img->titulo}}">editar</span>
                                             </td>
                                         </tr>
                                     @endif

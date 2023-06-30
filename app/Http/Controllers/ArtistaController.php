@@ -14,12 +14,7 @@ class ArtistaController extends Controller
     public function store(Request $request){
         $img = new Artista();
         $img->titulo = $request->titulo;
-        if ($request->hasFile('archivo')) {
-            $archivo = $request->file('archivo');
-            $nombreArchivo = $archivo->getClientOriginalName();
-            $rutaArchivo = $archivo->storeAs('imagenes', $nombreArchivo, 'public');
-            $img->archivo = $rutaArchivo;
-        }
+        $img->archivo = $request->archivo->store('public/imagenes');
         $img ->baneada = false;
         $img ->motivo_ban = "";
         $img->cuenta_user = $request->usuario;
@@ -33,5 +28,16 @@ class ArtistaController extends Controller
             $img->delete();
             return redirect()->route('artista.index');
         }
-        
+        public function edit(Artista $img){
+            return view('artista.editar',compact('img'));
+        }
+        public function update(Artista $img,Request $request){
+            $img->titulo = $request->titulo;
+            if ($request->hasFile('archivo')) {
+                $img->archivo = $request->archivo->store('public/imagenes');
+            }
+            $img->save();
+            return redirect()->route('artista.index');
+    
+        }
 }
