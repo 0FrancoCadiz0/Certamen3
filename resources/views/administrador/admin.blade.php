@@ -69,6 +69,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Titulo: {{$img->titulo}}</h5>
                             <h6>Artista: {{$img->cuenta_user}}</h6>
+                            <h6>Estado: {{$img->baneada ? 'Baneado' : 'No Baneado'}}</h6>
                             <img src="{{Storage::url($img->archivo)}}" class="card-img-top" alt="{{$img->titulo}}">
                             <a href="{{route('administrador.info',$img->id)}}" class="btn btn-secondary" data-bs-toggle="tooltip"
                                 data-bs-title="Editar {{$img->titulo}}">ver info imagen</span></a>
