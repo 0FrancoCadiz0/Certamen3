@@ -41,6 +41,19 @@
     <div class="bar bg-warning">
         <img src="images/logo.png" alt="logo" width="25%" height="100%">
         <a href="{{route('home.login')}}" class="login-link">Iniciar sesión <i class="fas fa-arrow-right arrow-icon"></i></a>
+        <div class="form-group">
+            <label for="categoria">Filtrar:</label>
+            <select class="form-control" id="Filtrar" name="Filtrar" style="width: 200px;">
+                <option value="">Selecciona Artista</option>
+                @foreach ($u as $user)
+                    @if($user->perfil_id==2)
+                        <option value="{{ $user->user}}">{{$user->user}}</option>
+                    @endif
+                    
+                @endforeach
+            </select>
+        </div>
+        <button type="submit" class="btn btn-secondary">Filtar</button>
     </div>
 
     <div class="container-fluid">
@@ -49,13 +62,16 @@
                 <div class="col-lg-8">
                     @foreach ($imagenes as $img)
                     <div class="col-lg-4">
-                        <div class="card" style="width: 18rem; margin-left:200px">
+                        <div class="card" style="width: 18rem; margin-left:500px">
                             <img src="{{Storage::url($img->archivo)}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Titulo: {{$img->titulo}}</h5>
+                                <h6>Artista: {{$img->cuenta_user}}</h6>
+                                <img src="{{Storage::url($img->archivo)}}" class="card-img-top" alt="{{$img->titulo}}">
                             </div>
                         </div>
                     </div>
+                    <br>
                     @endforeach
                 </div>
             </div>

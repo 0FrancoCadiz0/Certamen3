@@ -12,13 +12,14 @@ class HomeController extends Controller
     }
     public function home(){
         $imagenes = Artista::all();
-        return view('home.index', compact('imagenes'));
+        $u = ArtistaRegister::all();
+        return view('home.index', compact('imagenes', 'u'));
     }
     public function register(){
         return view('home.register');
     }
 
-    public function store(Request $request){
+    public function registrarArtista(Request $request){
         $newArtista = new ArtistaRegister();
         $newArtista->user = $request->username;
         $newArtista ->password = $request->password;
